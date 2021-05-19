@@ -1,4 +1,4 @@
-package dao;
+package MV.MV;
 
 import java.util.List;
 
@@ -8,18 +8,21 @@ import javax.persistence.Query;
 
 import util.JpaUtil;
 
-public class CafeGeralDAOImp implements CafeGeralDAO {
+public class AppTeste {
 
-	@Override
-	public void linha() {
+	public static void main(String[] args) {
+
+	}
+
+//	Fora Do Main
+	public static void linha() {
 		for (int i = 0; i < 129; i++) {
 			System.out.print("=");
 		}
 		System.out.println("");
 	}
 
-	@Override
-	public void top() {
+	public static void top() {
 		linha();
 		for (int i = 0; i < 60; i++) {
 			if (i == 0) {
@@ -35,7 +38,7 @@ public class CafeGeralDAOImp implements CafeGeralDAO {
 		linha();
 	}
 
-	public void inserir(Object obj) {
+	public static void inserir(Object obj) {
 		EntityManager ent = JpaUtil.getEntityManager();
 		EntityTransaction tx = ent.getTransaction();
 		tx.begin();
@@ -45,7 +48,7 @@ public class CafeGeralDAOImp implements CafeGeralDAO {
 		System.out.println("Opção de café da manhã cadastrada com sucesso!");
 	}
 
-	public List buscarTodos(Object obj) {
+	public static List buscarTodos(Object obj) {
 		EntityManager ent = JpaUtil.getEntityManager();
 		Query query = ent.createQuery(" from " + obj.getClass().getSimpleName());
 		return query.getResultList();
@@ -62,7 +65,11 @@ public class CafeGeralDAOImp implements CafeGeralDAO {
 		System.out.println("Participante Removido da Lista de Partipantes do Café da Manhã!");
 	}
 
-	@Override
+	public Object buscarEspecifico(Class classe, Object primaryKey) {
+		EntityManager ent = JpaUtil.getEntityManager();
+		return ent.find(classe, primaryKey);
+	}
+
 	public void atualizar(Object obj) {
 		EntityManager ent = JpaUtil.getEntityManager();
 		EntityTransaction tx = ent.getTransaction();

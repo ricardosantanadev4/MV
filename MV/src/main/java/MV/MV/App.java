@@ -11,8 +11,6 @@ public class App {
 	public static void main(String[] args) {
 		CafeGeralDAO geralDAO = new CafeGeralDAOImp();
 		geralDAO.top();
-		Opcoes opcoes = new Opcoes();
-		List<Opcoes> listaOpcoes = geralDAO.buscarTodos(opcoes);
 		Scanner entradaUser = new Scanner(System.in);
 		System.out.println("Digite seu cpf");
 		String cpf = entradaUser.nextLine();
@@ -30,13 +28,15 @@ public class App {
 			String nome = entradaUser.nextLine();
 			System.out.println("Você pode escolher até duas opções de café da manhã!");
 			System.out.println();
+			Opcoes opcoes = new Opcoes();
+			List<Opcoes> listaOpcoes = geralDAO.buscarTodos(opcoes);
 			for (Opcoes opcao : listaOpcoes) {
 				if (opcao.getStatus().equalsIgnoreCase("DISPONÍVEL"))
 					System.out.println(opcao.getNome());
 			}
-			Scanner opcaoCafe = new Scanner(System.in);
+			Scanner opcao1Cafe = new Scanner(System.in);
 			System.out.println("Copie e cole a opção escolhida!");
-			String opcao1 = opcaoCafe.nextLine();
+			String opcao1 = opcao1Cafe.nextLine();
 			ParticipanteseOpcoes po = new ParticipanteseOpcoes();
 			po.setNome(nome);
 			po.setCpf(cpf);
@@ -50,34 +50,36 @@ public class App {
 				}
 			}
 			System.out.println("Deseja trazer uma segunda opção de café da manhã?");
-			System.out.println("Digite s para sim ou n para não");
+			System.out.println("Digite n para não outra tecla para sim");
 			Scanner opcaoTexto = new Scanner(System.in);
-			String opcao2 = opcaoTexto.nextLine();
-
-			if (opcao2.equalsIgnoreCase("N")) {
+			String escolha = opcaoTexto.nextLine();
+			if (escolha.equalsIgnoreCase("N")) {
 				po.setOpcao2(null);
-			} else {
-				Opcoes opp2 = new Opcoes();
-				List<Opcoes> listaOpcoes2 = geralDAO.buscarTodos(opp2);
-				System.out.println("Opções: ");
-				for (Opcoes opc2 : listaOpcoes2) {
-					if (opc2.getStatus().equalsIgnoreCase("DISPONÍVEL"))
-						System.out.println(opc2.getNome());
-				}
-				System.out.println("Copie e cole a opcao2: ");
-				String inserirOpcao2 = opcaoCafe.nextLine();
-				po.setOpcao2(inserirOpcao2);
 				geralDAO.inserir(po);
-				Opcoes op2 = new Opcoes();
-				List<Opcoes> listaOp2 = geralDAO.buscarTodos(op2);
-				for (Opcoes o2 : listaOp2) {
-					if (o2.getNome().equalsIgnoreCase(inserirOpcao2)) {
-						o2.setStatus("INDISPONÍVEL");
-						geralDAO.atualizar(o2);
+			} else {
+				System.out.println("Copie e cole a opcao2: ");
+				Scanner opcao2Cafe = new Scanner(System.in);
+				String opcao2 = opcao2Cafe.nextLine();
+				if (opcao1.equalsIgnoreCase(opcao2)) {
+					System.out.println("Você não pode repetir a mesma opção de café!");
+					for (Opcoes opcoes2 : listaOpcoes) {
+						if (opcoes2.getNome().equalsIgnoreCase(opcao1)) {
+							opcoes2.setStatus("DISPONÍVEL");
+							geralDAO.atualizar(opcoes2);
+							System.out.println("Cadastro não efetuado!");
+						}
+					}
+				} else {
+					po.setOpcao2(opcao2);
+					geralDAO.inserir(po);
+					for (Opcoes statusOpcao2 : listaOpcoes) {
+						if (statusOpcao2.getNome().equalsIgnoreCase(opcao2)) {
+							statusOpcao2.setStatus("INDISPONÍVEL");
+							geralDAO.atualizar(statusOpcao2);
+						}
 					}
 				}
 			}
-
 		}
 	}
 }

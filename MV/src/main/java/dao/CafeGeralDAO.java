@@ -12,8 +12,6 @@ public interface CafeGeralDAO {
 	public List buscarTodos(Object obj);
 
 	public void remover(Class classe, Object primaryKey);
-	
-	public Object buscarEspecifico(Class classe, Object primaryKey); 
-	
+
 	public void atualizar(Object obj);
 }
