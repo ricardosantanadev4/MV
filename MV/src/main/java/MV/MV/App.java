@@ -11,8 +11,8 @@ public class App {
 	public static void main(String[] args) {
 		CafeGeralDAO geralDAO = new CafeGeralDAOImp();
 		geralDAO.top();
-		Scanner entradaUser = new Scanner(System.in);
 		System.out.println("Digite seu cpf");
+		Scanner entradaUser = new Scanner(System.in);
 		String cpf = entradaUser.nextLine();
 		ParticipanteseOpcoes pop = new ParticipanteseOpcoes();
 		List<ParticipanteseOpcoes> listaParticipantes = geralDAO.buscarTodos(pop);
@@ -21,6 +21,15 @@ public class App {
 			if (cpf.equalsIgnoreCase(pt.getCpf())) {
 				i = 1;
 				System.out.println("cpf " + cpf + " já cadastrado! ");
+				System.out.println("Escolha uma das opções: ");
+				System.out.println("1-Ver lista de participantes com suas opções:\n2-Outro número sair: ");
+				int opcCpf = entradaUser.nextInt();
+				if (opcCpf == 1) {
+					for (ParticipanteseOpcoes verList : listaParticipantes) {
+						System.out.println(verList.getNome() + " - " + verList.getCpf() + " - " + verList.getOpcao1()
+								+ " - " + verList.getOpcao2());
+					}
+				}
 			}
 		}
 		if (i == 0) {
