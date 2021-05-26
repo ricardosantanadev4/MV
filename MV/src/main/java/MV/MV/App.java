@@ -22,13 +22,39 @@ public class App {
 				i = 1;
 				System.out.println("cpf " + cpf + " já cadastrado! ");
 				System.out.println("Escolha uma das opções: ");
-				System.out.println("1-Ver lista de participantes com suas opções:\n2-Outro número sair: ");
+				System.out.println(
+						"1-Ver lista de participantes com suas opções:\n2-Retirar nome da lista de partcipantes do café da manhã\n3-Outro número sair: ");
 				int opcCpf = entradaUser.nextInt();
 				if (opcCpf == 1) {
 					for (ParticipanteseOpcoes verList : listaParticipantes) {
 						System.out.println(verList.getNome() + " - " + verList.getCpf() + " - " + verList.getOpcao1()
 								+ " - " + verList.getOpcao2());
 					}
+				} else if (opcCpf == 2) {
+					String altOp1 = "";
+					String altOp2 = "";
+					for (ParticipanteseOpcoes p : listaParticipantes) {
+						if (cpf.equalsIgnoreCase(p.getCpf())) {
+							altOp1 = p.getOpcao1();
+							altOp2 = p.getOpcao2();
+						}
+					}
+					Opcoes opcao1 = new Opcoes();
+					List<Opcoes> listaOpcoes = geralDAO.buscarTodos(opcao1);
+					for (Opcoes op1 : listaOpcoes) {
+						if (altOp1 != null && altOp1.equalsIgnoreCase(op1.getNome())) {
+							op1.setStatus("DISPONÍVEL");
+							geralDAO.atualizar(op1);
+						}
+					}
+					Opcoes opcao2 = new Opcoes();
+					for (Opcoes op2 : listaOpcoes) {
+						if (altOp2 != null && altOp2.equalsIgnoreCase(op2.getNome())) {
+							op2.setStatus("DISPONÍVEL");
+							geralDAO.atualizar(op2);
+						}
+					}
+					geralDAO.remover(ParticipanteseOpcoes.class, cpf);
 				}
 			}
 		}

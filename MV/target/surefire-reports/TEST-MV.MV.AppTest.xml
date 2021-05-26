@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="MV.MV.AppTest" time="0.051" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="MV.MV.AppTest" time="0.143" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -7,56 +7,56 @@
     <property name="java.specification.version" value="1.8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="E:\CursoMvSistema\DesafiosMV\MV\target\test-classes;E:\CursoMvSistema\DesafiosMV\MV\target\classes;C:\Users\Ricardo\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Ricardo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Ricardo\.m2\repository\com\oracle\ojdbc6\11.2.0\ojdbc6-11.2.0.jar;C:\Users\Ricardo\.m2\repository\org\hibernate\hibernate-entitymanager\4.3.0.Final\hibernate-entitymanager-4.3.0.Final.jar;C:\Users\Ricardo\.m2\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar;C:\Users\Ricardo\.m2\repository\org\jboss\logging\jboss-logging-annotations\1.2.0.Beta1\jboss-logging-annotations-1.2.0.Beta1.jar;C:\Users\Ricardo\.m2\repository\org\hibernate\hibernate-core\4.3.0.Final\hibernate-core-4.3.0.Final.jar;C:\Users\Ricardo\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Ricardo\.m2\repository\org\jboss\jandex\1.1.0.Final\jandex-1.1.0.Final.jar;C:\Users\Ricardo\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Ricardo\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Users\Ricardo\.m2\repository\org\hibernate\common\hibernate-commons-annotations\4.0.4.Final\hibernate-commons-annotations-4.0.4.Final.jar;C:\Users\Ricardo\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\Ricardo\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.0.0.Final\jboss-transaction-api_1.2_spec-1.0.0.Final.jar;C:\Users\Ricardo\.m2\repository\org\javassist\javassist\3.18.1-GA\javassist-3.18.1-GA.jar;"/>
+    <property name="java.class.path" value="C:\Repositórios\MV\MV\target\test-classes;C:\Repositórios\MV\MV\target\classes;C:\Users\aponte\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\aponte\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\aponte\.m2\repository\com\oracle\ojdbc6\11.2.0\ojdbc6-11.2.0.jar;C:\Users\aponte\.m2\repository\org\hibernate\hibernate-entitymanager\4.3.0.Final\hibernate-entitymanager-4.3.0.Final.jar;C:\Users\aponte\.m2\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar;C:\Users\aponte\.m2\repository\org\jboss\logging\jboss-logging-annotations\1.2.0.Beta1\jboss-logging-annotations-1.2.0.Beta1.jar;C:\Users\aponte\.m2\repository\org\hibernate\hibernate-core\4.3.0.Final\hibernate-core-4.3.0.Final.jar;C:\Users\aponte\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\aponte\.m2\repository\org\jboss\jandex\1.1.0.Final\jandex-1.1.0.Final.jar;C:\Users\aponte\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\aponte\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Users\aponte\.m2\repository\org\hibernate\common\hibernate-commons-annotations\4.0.4.Final\hibernate-commons-annotations-4.0.4.Final.jar;C:\Users\aponte\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\aponte\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.0.0.Final\jboss-transaction-api_1.2_spec-1.0.0.Final.jar;C:\Users\aponte\.m2\repository\org\javassist\javassist\3.18.1-GA\javassist-3.18.1-GA.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
-    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="user.timezone" value="America/Cayenne"/>
     <property name="java.vm.specification.version" value="1.8"/>
-    <property name="os.name" value="Windows 8.1"/>
+    <property name="os.name" value="Windows 10"/>
     <property name="user.country" value="BR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_241\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\Ricardo\AppData\Local\Temp\surefire7487018788921058010\surefirebooter6339651425765801083.jar C:\Users\Ricardo\AppData\Local\Temp\surefire7487018788921058010 2021-05-24T20-24-30_140-jvmRun1 surefire3608814579027024622tmp surefire_02606230403035526979tmp"/>
-    <property name="surefire.test.class.path" value="E:\CursoMvSistema\DesafiosMV\MV\target\test-classes;E:\CursoMvSistema\DesafiosMV\MV\target\classes;C:\Users\Ricardo\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Ricardo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Ricardo\.m2\repository\com\oracle\ojdbc6\11.2.0\ojdbc6-11.2.0.jar;C:\Users\Ricardo\.m2\repository\org\hibernate\hibernate-entitymanager\4.3.0.Final\hibernate-entitymanager-4.3.0.Final.jar;C:\Users\Ricardo\.m2\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar;C:\Users\Ricardo\.m2\repository\org\jboss\logging\jboss-logging-annotations\1.2.0.Beta1\jboss-logging-annotations-1.2.0.Beta1.jar;C:\Users\Ricardo\.m2\repository\org\hibernate\hibernate-core\4.3.0.Final\hibernate-core-4.3.0.Final.jar;C:\Users\Ricardo\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Ricardo\.m2\repository\org\jboss\jandex\1.1.0.Final\jandex-1.1.0.Final.jar;C:\Users\Ricardo\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Ricardo\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Users\Ricardo\.m2\repository\org\hibernate\common\hibernate-commons-annotations\4.0.4.Final\hibernate-commons-annotations-4.0.4.Final.jar;C:\Users\Ricardo\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\Ricardo\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.0.0.Final\jboss-transaction-api_1.2_spec-1.0.0.Final.jar;C:\Users\Ricardo\.m2\repository\org\javassist\javassist\3.18.1-GA\javassist-3.18.1-GA.jar;"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_251\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\aponte\AppData\Local\Temp\surefire28038566909528588\surefirebooter4669344769995339649.jar C:\Users\aponte\AppData\Local\Temp\surefire28038566909528588 2021-05-25T20-14-21_305-jvmRun1 surefire4614224836268607816tmp surefire_05084795303943828484tmp"/>
+    <property name="surefire.test.class.path" value="C:\Repositórios\MV\MV\target\test-classes;C:\Repositórios\MV\MV\target\classes;C:\Users\aponte\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\aponte\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\aponte\.m2\repository\com\oracle\ojdbc6\11.2.0\ojdbc6-11.2.0.jar;C:\Users\aponte\.m2\repository\org\hibernate\hibernate-entitymanager\4.3.0.Final\hibernate-entitymanager-4.3.0.Final.jar;C:\Users\aponte\.m2\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar;C:\Users\aponte\.m2\repository\org\jboss\logging\jboss-logging-annotations\1.2.0.Beta1\jboss-logging-annotations-1.2.0.Beta1.jar;C:\Users\aponte\.m2\repository\org\hibernate\hibernate-core\4.3.0.Final\hibernate-core-4.3.0.Final.jar;C:\Users\aponte\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\aponte\.m2\repository\org\jboss\jandex\1.1.0.Final\jandex-1.1.0.Final.jar;C:\Users\aponte\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\aponte\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Users\aponte\.m2\repository\org\hibernate\common\hibernate-commons-annotations\4.0.4.Final\hibernate-commons-annotations-4.0.4.Final.jar;C:\Users\aponte\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\aponte\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.0.0.Final\jboss-transaction-api_1.2_spec-1.0.0.Final.jar;C:\Users\aponte\.m2\repository\org\javassist\javassist\3.18.1-GA\javassist-3.18.1-GA.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="C:\Users\Ricardo"/>
+    <property name="user.home" value="C:\Users\aponte"/>
     <property name="user.language" value="pt"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_241\jre"/>
-    <property name="basedir" value="E:\CursoMvSistema\DesafiosMV\MV"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_251\jre"/>
+    <property name="basedir" value="C:\Repositórios\MV\MV"/>
     <property name="file.separator" value="\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Ricardo\AppData\Local\Temp\surefire7487018788921058010\surefirebooter6339651425765801083.jar"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_241\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_241\jre\classes"/>
+    <property name="surefire.real.class.path" value="C:\Users\aponte\AppData\Local\Temp\surefire28038566909528588\surefirebooter4669344769995339649.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_251\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_251\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="1.8.0_241-b07"/>
-    <property name="user.name" value="RicardoDev"/>
+    <property name="java.runtime.version" value="1.8.0_251-b08"/>
+    <property name="user.name" value="aponte"/>
     <property name="path.separator" value=";"/>
-    <property name="os.version" value="6.3"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_241\jre\lib\endorsed"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_251\jre\lib\endorsed"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="Cp1252"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="localRepository" value="C:\Users\Ricardo\.m2\repository"/>
+    <property name="localRepository" value="C:\Users\aponte\.m2\repository"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="C:\Users\Ricardo\AppData\Local\Temp\"/>
-    <property name="java.version" value="1.8.0_241"/>
-    <property name="user.dir" value="E:\CursoMvSistema\DesafiosMV\MV"/>
+    <property name="java.io.tmpdir" value="C:\Users\aponte\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_251"/>
+    <property name="user.dir" value="C:\Repositórios\MV\MV"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_241\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_281/bin/server;C:/Program Files/Java/jre1.8.0_281/bin;C:/Program Files/Java/jre1.8.0_281/lib/amd64;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\FFmpeg\bin;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\FFmpeg\bin;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\FFmpeg\bin;C:\Windows\System32;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\ffmpeg\bin;C:\Windows\system32;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_251\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_291/bin/server;C:/Program Files/Java/jre1.8.0_291/bin;C:/Program Files/Java/jre1.8.0_291/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\ffmpeg\bin;C:\Users\aponte\eclipse\jee-2020-032\eclipse;;."/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="25.241-b07"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_241\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="java.vm.version" value="25.251-b08"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_251\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
