@@ -23,7 +23,7 @@ public class App {
 				System.out.println("cpf " + cpf + " já cadastrado! ");
 				System.out.println("Escolha uma das opções: ");
 				System.out.println(
-						"1-Ver lista de participantes com suas opções:\n2-Retirar nome da lista de partcipantes do café da manhã\n3-Outro número sair: ");
+						"1-Ver lista de participantes com suas opções:\n2-Retirar nome da lista de partcipantes do café da manhã\n3-Mudar suas opções de café da manhã\n4-Outro número sair: ");
 				int opcCpf = entradaUser.nextInt();
 				if (opcCpf == 1) {
 					for (ParticipanteseOpcoes verList : listaParticipantes) {
@@ -55,6 +55,81 @@ public class App {
 						}
 					}
 					geralDAO.remover(ParticipanteseOpcoes.class, cpf);
+				} else if (opcCpf == 3) {
+					String altOpc1Part = "";
+					String altOpc2Part = "";
+					for (ParticipanteseOpcoes opcPart : listaParticipantes) {
+						if (cpf.equalsIgnoreCase(opcPart.getCpf())) {
+							altOpc1Part = opcPart.getOpcao1();
+							altOpc2Part = opcPart.getOpcao2();
+						}
+					}
+					System.out.println("Esta é a sua opção1 de café damnhã: " + altOpc1Part);
+					System.out.println("Deseja alterar? s para sim outra letra para não");
+					Scanner atualizar1 = new Scanner(System.in);
+					String escolha1 = atualizar1.nextLine();
+					Opcoes altOpc = new Opcoes();
+					List<Opcoes> listaOpcoes = geralDAO.buscarTodos(altOpc);
+					if (escolha1.equalsIgnoreCase("S")) {
+						for (Opcoes opcDsp : listaOpcoes) {
+							if (opcDsp.getStatus().equalsIgnoreCase("DISPONÍVEL")) {
+								System.out.println(opcDsp.getNome());
+							}
+						}
+						System.out.println("Copie e cole a opcão1");
+						String opcao1Alt = atualizar1.nextLine();
+						for (Opcoes updtOpc1Ind : listaOpcoes) {
+							if (opcao1Alt.equalsIgnoreCase(updtOpc1Ind.getNome())) {
+								updtOpc1Ind.setStatus("INDISPONÍVEL");
+								geralDAO.atualizar(updtOpc1Ind);
+							}
+						}
+						for (ParticipanteseOpcoes updtOpc1Pt : listaParticipantes) {
+							if (cpf.equalsIgnoreCase(updtOpc1Pt.getCpf())) {
+								updtOpc1Pt.setOpcao1(opcao1Alt);
+								geralDAO.atualizar(updtOpc1Pt);
+							}
+						}
+
+					}
+					System.out.println("Esta é a sua opção2 de café da manhã: " + altOpc2Part);
+					System.out.println("Deseja alterar? s para sim outra letra para não");
+					Scanner atualizar2 = new Scanner(System.in);
+					String escolha2 = atualizar2.nextLine();
+					if (escolha2.equalsIgnoreCase("S")) {
+						for (Opcoes opcDsp : listaOpcoes) {
+							if (opcDsp.getStatus().equalsIgnoreCase("DISPONÍVEL")) {
+								System.out.println(opcDsp.getNome());
+							}
+						}
+						System.out.println("Copie e cole a opcão2");
+						String opcao2Alt = atualizar2.nextLine();
+						for (Opcoes update1 : listaOpcoes) {
+							if (altOpc1Part != null && altOpc1Part.equalsIgnoreCase(update1.getNome())) {
+								update1.setStatus("DISPONÍVEL");
+								geralDAO.atualizar(update1);
+							}
+						}
+						for (Opcoes update2 : listaOpcoes) {
+							if (altOpc2Part != null && altOpc2Part.equalsIgnoreCase(update2.getNome())) {
+								update2.setStatus("DISPONÍVEL");
+								geralDAO.atualizar(update2);
+							}
+						}
+						for (Opcoes updtopc2Ind : listaOpcoes) {
+							if (opcao2Alt.equalsIgnoreCase(updtopc2Ind.getNome())) {
+								updtopc2Ind.setStatus("INDISPONÍVEL");
+								geralDAO.atualizar(updtopc2Ind);
+							}
+						}
+						for (ParticipanteseOpcoes updtOpc2Pt : listaParticipantes) {
+							if (cpf.equalsIgnoreCase(updtOpc2Pt.getCpf())) {
+								updtOpc2Pt.setOpcao2(opcao2Alt);
+								geralDAO.atualizar(updtOpc2Pt);
+							}
+						}
+
+					}
 				}
 			}
 		}
@@ -80,8 +155,8 @@ public class App {
 					if (opcao.getStatus().equalsIgnoreCase("DISPONÍVEL"))
 						System.out.println(opcao.getNome());
 				}
-				Scanner opcao1Cafe = new Scanner(System.in);
 				System.out.println("Copie e cole a opção escolhida!");
+				Scanner opcao1Cafe = new Scanner(System.in);
 				String opcao1 = opcao1Cafe.nextLine();
 				ParticipanteseOpcoes po = new ParticipanteseOpcoes();
 				po.setNome(nome);
